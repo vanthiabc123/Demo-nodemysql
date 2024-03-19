@@ -1,0 +1,22 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/get-productUser">Nodejs</a>
+      </div>
+      <% if (locals.user) { %>
+        <li class="nav-item">
+          <a class="nav-link" href="/"><%= locals.user.username %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Logout</a>
+        </li>
+        <% } else { %>
+        <li class="nav-item">
+          <a class="nav-link" href="/loginpage">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/register">Register</a>
+        </li>
+        <% } %>
+    </div>
+  </nav>
